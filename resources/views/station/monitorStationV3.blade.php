@@ -21,6 +21,15 @@
 	.colorFlood{background-color: darkorange;}
 	.colorAlert{background-color: yellow;}
 	.colorPreAlert{background-color: lightyellow;}
+	.legenda{
+
+		align-self: right;
+		border: solid 1.5px #c9cdca;
+		width: 15%;
+		height: 70%
+		text-align: center;
+	}
+
 </style>
 
 </head>
@@ -38,9 +47,12 @@
 			</div>
 			<div class="row border time">
 			<h2>Informações atualizadas em : <?php echo date('d M Y') . " às " . date('H:i:s')?></h2>
-
-			<!--<h6 align="right">v2</h6>-->
 			
+			</div>
+			<div class="legenda">
+				<h3 class="colorPreAlert">Pre-alerta</h3>
+				<h3 class="colorAlert">Alerta</h3>
+				<h3 class="colorFlood">Inundação</h3>
 			</div>
 
 			<div class="listaRios">
