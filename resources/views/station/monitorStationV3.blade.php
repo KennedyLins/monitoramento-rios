@@ -36,7 +36,7 @@
 			<h2>Monitoramento dos Rios do Estado de Pernambuco - v2</p></h2>
 			</div>
 			<div class="row border time">
-			<h2>Dados atualizados em : <?php echo date('d M Y') . " às " . date('H:i:s')?></h2>
+			<h2>Informações atualizadas em : <?php echo date('d M Y') . " às " . date('H:i:s')?></h2>
 
 			<!--<h6 align="right">v2</h6>-->
 			

@@ -42,8 +42,8 @@ class MainController extends Controller
 
                 if(array_key_exists('ErrorTable', $contents)){
 
-                        $niveis = "PCD EM MANUTENÇÃO";
-                        $dataHoraColeta = $carbon;
+                        $niveis = $hidro_station->levelNow;;
+                        $dataHoraColeta = '' ;
                         
                 }else{
 
@@ -53,25 +53,37 @@ class MainController extends Controller
                     if(array_key_first($dadosHidro) === 0){
 
                         $niveis         = $dadosHidro[0]['Nivel'];
-                        $dataHoraColeta = $dadosHidro[0]['DataHora'];
-                        if ($niveis == ""){
 
-                        $niveis = "Dado não coletado na última atualização";
+                        if ($niveis != ""){
+
+                        $dataHoraColeta = $dadosHidro[0]['DataHora'];
+                        
+                        }else{
+
+                        $niveis = $hidro_station->levelNow;
+                        $dataHoraColeta = '';
                         }
 
                     }else{
 
-                        $niveis = "PCD EM MANUTENÇÃO";
-                        $dataHoraColeta = $carbon;
+                        $niveis = $hidro_station->levelNow;
+                        $dataHoraColeta = '';
                     }                                      
                 }
+
+                if($dataHoraColeta != ''){
+                    $dataHoraColetaSplit = Carbon::parse($dataHoraColeta);
+                    $dataColeta          = $dataHoraColetaSplit->format('d/m/Y');
+                    $horaColeta          = $dataHoraColetaSplit->format('H:i');
+
+                }else{
+
+                    $dataColeta = $hidro_station->dataColeta;
+                    $horaColeta = $hidro_station->horaColeta;
+
+                }
             }
-
-            $dataHoraColetaSplit = Carbon::parse($dataHoraColeta);
-            $dataColeta          = $dataHoraColetaSplit->format('d/m/Y');
-            $horaColeta          = $dataHoraColetaSplit->format('H:i');
-
-
+            
             $hidro_station->levelNow    = $niveis;
             $hidro_station->dataColeta  = $dataColeta;
             $hidro_station->horaColeta  = $horaColeta;
