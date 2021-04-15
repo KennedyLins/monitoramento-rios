@@ -11,6 +11,7 @@ border-color: #91bde7;
 
 }
 
+
 .content{
 background-color: #fff;
 width: 815px;
@@ -48,6 +49,26 @@ padding-top: 5px;
 text-align: center;
 
 }
+
+.colorFlood{
+	background-color: darkorange;}
+
+.colorAlert{
+	background-color: yellow;}
+
+.colorPreAlert{
+	background-color: lightyellow;}
+
+.legenda{
+
+		align-self: right;
+		border: solid 1.5px #c9cdca;
+		width: 15%;
+		height: 70%
+		text-align: center;
+	}
+
+
 
 #gridDadosRioId{
 	
