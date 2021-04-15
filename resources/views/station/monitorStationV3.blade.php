@@ -20,6 +20,7 @@
 <style>
 	.red{background-color: red;}
 	.orange{background-color: orange;}
+	.yellow{background-color: yellow;}
 </style>
 
 </head>
@@ -93,7 +94,7 @@ new Vue({
 
 	data: {		
 
-		defineClass: ['gridDados','orange','red']
+		defineClass: ['gridDados','yellow','orange','red']
 
 	},
 	methods: {
@@ -105,10 +106,12 @@ new Vue({
 				return this.defineClass[0]
 			}else{
 
-				if(dados.levelNow >= dados.alertLevel && dados.levelNow < dados.floodLevel){
+				if(dados.levelNow >= dados.preAlertLevel && dados.levelNow < dados.alertLevel){
 					return this.defineClass[1]
-				}else if(dados.levelNow >= dados.floodLevel){
+				}else if(dados.levelNow >= dados.alertLevel && dados.levelNow < dados.floodLevel){
 					return this.defineClass[2]
+				}else if(dados.levelNow >= dados.floodLevel){
+					return this.defineClass[3]
 				}else{
 					return this.defineClass[0]
 				}
