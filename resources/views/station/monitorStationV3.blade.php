@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html >
 <head>
-  <title>Monitoramento dos Hidrômetros instalados em Pernambuco | APAC - Agência Pernambucana de Águas e Climas</title>
+  <title>APAC - Agência Pernambucana de Águas e Climas</title>
 
   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
   <meta http-equiv="cache-control" content="no-cache">
@@ -22,7 +22,6 @@
 	.orange{background-color: orange;}
 </style>
 
-
 </head>
 
 <body>
@@ -33,7 +32,8 @@
 			</div>
 
 			<div class="row border titulo">
-			<h2>Monitoramento dos Rios do Estado de Pernambuco - v2</p></h2>
+			<h2>Monitoramento dos Rios do Estado de Pernambuco - v2</h2>
+			<h2>Rede de Alerta<h2>
 			</div>
 			<div class="row border time">
 			<h2>Informações atualizadas em : <?php echo date('d M Y') . " às " . date('H:i:s')?></h2>
