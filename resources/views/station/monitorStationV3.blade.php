@@ -18,9 +18,9 @@
 <link rel="stylesheet" https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css>
 
 <style>
-	.red{background-color: red;}
-	.orange{background-color: orange;}
-	.yellow{background-color: yellow;}
+	.colorFlood{background-color: darkorange;}
+	.colorAlert{background-color: yellow;}
+	.colorPreAlert{background-color: lightyellow;}
 </style>
 
 </head>
@@ -94,7 +94,7 @@ new Vue({
 
 	data: {		
 
-		defineClass: ['gridDados','yellow','orange','red']
+		defineClass: ['gridDados','colorPreAlert','colorAlert','colorFlood']
 
 	},
 	methods: {
